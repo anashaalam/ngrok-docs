@@ -1,21 +1,24 @@
----
-title: "What is ERR_NGROK_3200 and how do I fix it?"
-hide_table_of_contents: true
-displayed_sidebar: docs
----
+# 🗒️ Note Taking App (Android + Flask)
 
-import { InlineCode } from "@ngrok/mantle/inline-code";
-import ErrorDetails from "/src/components/ErrorDetails";
-import { EndpointUrlOrigin } from "/src/components/search-params-endpoint-url";
+This is a simple note-taking application built with:
+- Kotlin Android App using Retrofit
+- Flask REST API backend with SQLite
+- Connected via ngrok for testing
 
-# ERR_NGROK_3200
+## 🧪 API Endpoints
 
-### Message
+| Method | Endpoint               | Description        |
+|--------|------------------------|--------------------|
+| GET    | /get_notes             | Get all notes      |
+| POST   | /add_note              | Add a new note     |
+| PUT    | /update_note/<id>      | Update a note      |
+| DELETE | /delete_note/<id>      | Delete a note      |
 
-The endpoint <InlineCode><EndpointUrlOrigin fallback="HOSTNAME" /></InlineCode> is offline.
+## 🚀 How to Run
 
-<ErrorDetails error="err_ngrok_3200" />
+### 🖥️ Backend
 
-### Further help
-
-If you're having trouble resolving this error, please reach out to [support@ngrok.com](mailto:support@ngrok.com?subject=Help%20with%20ERR_NGROK_3200)
+```bash
+cd flask-server
+pip install -r requirements.txt
+python app.py
